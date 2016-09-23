@@ -50,7 +50,7 @@ $(document).ready(function() {
                 }
             });
 
-            var questionslocation = [];
+            var searchlist = [];
             $.ajax({
                 url: '/searchitems',
                 type: "POST",
@@ -59,7 +59,7 @@ $(document).ready(function() {
 //                    console.log(response);
                     var result = JSON.parse(response);
                     for (var x in result.locations) {
-                        questionslocation.push({
+                        searchlist.push({
                             label: result.locations[x].location,
                             category: "Locations",
                             country: result.locations[x].questioncountry,
@@ -67,7 +67,7 @@ $(document).ready(function() {
                             city: result.locations[x].questioncity});
                     }
                     for (var x in result.questions) {
-                        questionslocation.push({
+                        searchlist.push({
                             label: result.questions[x].questiontitle,
                             category: "Questions",
                             location: result.questions[x].location,
@@ -79,7 +79,7 @@ $(document).ready(function() {
                         });
                     }
                     for (var x in result.advisors) {
-                        questionslocation.push({
+                        searchlist.push({
                             label: result.advisors[x].name,
                             category: "Advisors",
                             photo: result.advisors[x].profilepicture,
@@ -90,7 +90,7 @@ $(document).ready(function() {
 
                     $("#questionsearch").catcomplete({
                         minLength: 2,
-                        source: questionslocation,
+                        source: searchlist,
                         autoFocus: true,
                         focus: function(event, ui) {
                             $("#questionsearchhidden").val(ui.item.label);

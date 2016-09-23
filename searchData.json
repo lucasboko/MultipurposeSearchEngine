@@ -12,7 +12,7 @@
       "questionstatelong": "Québec",
       "questioncountry": "Canada"
     },
-    { ... }
+    {...}
   ],
   "questions": [
     {
@@ -33,21 +33,21 @@
       "questionstatelong": "Québec",
       "questioncountry": "Canada"
     },
-    { ... }
+    {...}
   ],
   "advisors": [
     {
       "userid": "1",
-      "name": "AJohn Doe",
+      "name": "John Doe",
       "location": "Lausanne, Switzerland",
-      "profilepicture": "profilepicture1"
+      "picture": "picture1"
     },
     {
       "userid": "2",
       "name": "Jane Doe,
       "location": "Fredericton, Canada",
-      "profilepicture": "profilepicture2"
+      "picture": "picture2"
     },
-    { ... }
+    {...}
   ]
 }
